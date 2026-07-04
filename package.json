@@ -1,0 +1,15 @@
+{
+  "name": "price-comparison-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-quality MERN grocery price comparison platform with provider connectors.",
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "dev": "concurrently \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "build": "npm --prefix frontend run build",
+    "start": "npm --prefix backend start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

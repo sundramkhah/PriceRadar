@@ -1,0 +1,43 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Price Comparison API",
+    "version": "1.0.0",
+    "description": "MERN grocery price comparison API with provider connectors."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000/api/v1"
+    }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health check",
+        "responses": {
+          "200": {
+            "description": "API is healthy"
+          }
+        }
+      }
+    },
+    "/products/search": {
+      "get": {
+        "summary": "Compare grocery prices",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Compared product results"
+          }
+        }
+      }
+    }
+  }
+}
